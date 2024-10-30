@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision & Mission</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styling to create a unique diagonal design */
+        .custom-diagonal {
+            clip-path: polygon(100% 0, 100% 85%, 50% 85%, 0 100%, 0 0);
+        }
+
+        /* Styling for the mission and vision icons */
+        .icon-bg {
+            background-color: #f44336; /* red background for icons */
+            border-radius: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Main Content Section -->
+    <main class="p-4 max-w-5xl mx-auto">
+        <!-- Image and Vision & Mission Header Section -->
+        <div class="relative bg-white rounded-lg shadow-lg overflow-hidden">
+            <!-- Kwankwaso Image with Diagonal Shape -->
+            <div class="relative">
+                <img src="./images/jagora-7.jpg" alt="Kwankwaso" class="w-full h-auto custom-diagonal">
+                <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                    <div class="bg-black bg-opacity-60 text-white text-xl md:text-3xl font-bold p-4 rounded-full">
+                        Vision & Mission
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission and Vision Section -->
+        <div class="mt-6 space-y-8">
+            <!-- Mission Section -->
+            <div class="bg-red-50 p-6 rounded-lg flex flex-col md:flex-row items-center shadow-md">
+                <!-- Icon -->
+                <div class="flex-shrink-0 icon-bg text-white text-3xl md:text-5xl font-bold p-4">
+                    🎯
+                </div>
+                <!-- Mission Content -->
+                <div class="mt-4 md:mt-0 md:ml-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-red-600">Mission:</h2>
+                    <p class="mt-2 text-lg text-gray-700 leading-relaxed">
+                        Our mission is to provide Kwankwaso with a strong digital presence that will generate engagement
+                        and support for his presidential campaign. We aim to connect with the Nigerian electorate by
+                        utilizing various digital platforms to showcase Kwankwaso’s policies, ideals, and vision for a
+                        prosperous Nigeria. We are committed to implementing innovative digital strategies that will
+                        enable Kwankwaso’s campaign to stand out in a crowded political landscape.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Vision Section -->
+            <div class="bg-red-50 p-6 rounded-lg flex flex-col md:flex-row items-center shadow-md">
+                <!-- Icon -->
+                <div class="flex-shrink-0 icon-bg text-white text-3xl md:text-5xl font-bold p-4">
+                    🔍
+                </div>
+                <!-- Vision Content -->
+                <div class="mt-4 md:mt-0 md:ml-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-red-600">Vision:</h2>
+                    <p class="mt-2 text-lg text-gray-700 leading-relaxed">
+                        Our vision is to create a digital revolution for progress in Nigeria by bringing to the forefront
+                        Kwankwaso’s transformative agenda for the country’s future. Our plan is to tap into the
+                        possibilities of technology to engage the electorate, to reach a wider audience, to provide a
+                        more inclusive platform for citizens to be heard by their leaders and to inspire a new generation
+                        of leaders that embodies the needs and aspirations of the Nigerian people. We envision a Nigeria
+                        where digital technology plays a significant role in governance and decision-making, ultimately
+                        leading to a better standard of living for all citizens.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
