@@ -2,387 +2,838 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KND Project Website</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Keyframe for the Fade-In Effect */
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./images//p-nnpc.png"/>
+  <link rel="shortcut icon" href="./images/p-nnpc.png" type="image/x-icon">
+  <title>KND Project Website</title>
+  <script src="cdn.tailwindcss.com.3.4.5.js"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <style>
+    /* Keyframe for the Fade-In Effect */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        /* Smooth Transition for Background Image Changes */
-        .hero {
-            transition: background-image 1s ease-in-out;
-        }
+    /* Smooth Transition for Background Image Changes */
+    .hero {
+      transition: background-image 1s ease-in-out;
+    }
 
-        /* Custom Hero Styling */
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
-        }
+    /* Custom Hero Styling */
+    .hero-overlay {
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.9));
+    }
 
-        /* Hide Menu by Default on Mobile */
-        .menu-hidden {
-            display: none;
-        }
-    </style>
+    /* Hide Menu by Default on Mobile */
+    .menu-hidden {
+      display: none;
+    }
+  </style>
 </head>
 
 <body class="relative bg-gray-100 text-gray-900 font-poppins">
-    <div class="page w-100">
+  <div id="home" class="page w-100">
 
-        <!-- Responsive Navbar -->
-        <nav class="bg-red-600 p-4 fixed w-full z-20 top-0 left-0">
-            <div class="container mx-auto flex justify-between items-center">
-                <!-- Logo / Brand -->
-                <a href="#" class="text-white text-2xl font-bold">KND Project</a>
-                <!-- Menu Button for Mobile -->
-                <button id="menu-toggle" class="text-white block md:hidden focus:outline-none">
-                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
-                <!-- Links for Desktop -->
-                <div class="hidden md:flex space-x-6 text-white">
-                    <a href="#hero" class="hover:text-gray-300">Home</a>
-                    <a href="#about" class="hover:text-gray-300">About Us</a>
-                    <a href="#gallery" class="hover:text-gray-300">Gallery</a>
-                    <a href="#vision" class="hover:text-gray-300">Vision & Mission</a>
-                    <a href="#services" class="hover:text-gray-300">Services</a>
-                </div>
+
+    <!-- Responsive Navbar -->
+    <nav class="bg-red-600 p-4 fixed w-full z-20 top-0 left-0">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo / Brand -->
+        <a href="#" class="text-white text-2xl font-bold">
+          <!-- KND Project -->
+           <img src="./images/kndp-logo.png" alt="" class="h-10">
+        </a>
+        <!-- Menu Button for Mobile -->
+        <button id="menu-toggle" class="text-white block md:hidden focus:outline-none">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+        <!-- Links for Desktop -->
+        <div class="hidden md:flex space-x-6 text-white">
+          <a href="#home" class="hover:text-gray-300">Home</a>
+          <a href="#about" class="hover:text-gray-300">About Us</a>
+          <a href="#objectives" class="hover:text-gray-300">Objectives</a>
+          <a href="#gallery" class="hover:text-gray-300">Gallery</a>
+          <a href="members.html" class="hover:text-gray-300">Members</a>
+          <a href="#mission-and-vision" class="hover:text-gray-300">Mission & Vision</a>
+          <a href="#contact" class="hover:text-gray-300">Contact Us</a>
+        </div>
+      </div>
+      <!-- Mobile Menu Links -->
+      <div id="mobile-menu" class="menu-hidden bg-red-600 text-white flex-col space-y-4 p-4 md:hidden">
+        <a href="#home" class="block">Home</a>
+        <a href="#about" class="block">About Us</a>
+        <a href="#objectives" class="block">Objectives</a>
+        <a href="#gallery" class="block">Gallery</a>
+        <a href="objectives.html" class="block">Our Objectives and Progress</a>
+        <a href="members.html" class="block">Members</a>
+        <a href="#mission-and-vision" class="block">Mission & Vision</a>
+        <a href="#contact" class="block">Contact Us</a>
+      </div>
+    </nav>
+
+
+
+    <!-- Hero Section -->
+    <section id="#" class="relative bg-cover bg-center h-screen hero" style="
+          background-image: url('./images/jagora-7.jpg');
+          margin-top: 64px;
+        ">
+      <!-- Overlay -->
+      <div class="absolute inset-0 hero-overlay"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 flex items-center justify-center h-full text-center text-white px-6 md:px-12">
+        <div>
+          <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-4 animate__animated"
+            style="animation: fadeInUp 1.5s ease">
+            Empowering Nigeria's Future with Kwankwaso
+          </h1>
+          <p class="text-xl md:text-2xl leading-relaxed mb-8 animate__animated" style="animation: fadeInUp 1.8s ease">
+            A Digital Revolution for Progress
+          </p>
+          <a href="./files/KND-Magazine-4.pdf"
+            class="mt-12 bg-red-600 text-white py-3 px-6 rounded-full text-lg font-semibold shadow-lg hover:bg-red-700 transition duration-300 ease-in-out animate__animated"
+            style="animation: fadeInUp 2.1s ease" download="./files/KND-Magazine-4.pdf">
+            Download Blueprint
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- About -->
+    <section id="about" class="md:min-h-screen md:py-8 py-8 bg-red-50 w-100">
+      <div class="p-8 md:p-12">
+        <h3 class="text-3xl font-semibold p-4 text-center">About Us</h3>
+        <div class="container mx-auto pt-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:py-8 items-center">
+          <div class="animate__animated md:p-6 rounded-lg text-xl" style="animation: bounceIn 1.5s">
+            <p class="leading-relaxed">
+              At the heart of Kwankwaso's Digital Presidential Campaign is the
+              belief that Nigeria's future lies in its ability to embrace
+              emerging technologies to create lasting change. Our movement is
+              committed to leveraging the power of digital innovation to
+              transform the way our government serves its citizens, and to
+              empower every Nigerian to reach their fullest potential.
+            </p>
+            <br>
+            <p>
+              As a leader, Kwankwaso is known 
+              his innovative approach to 
+              complex challenges, and his ability to 
+              build powerful partnerships across the
+              country. Through our Kwankwasiyya
+              New Digital Project, we hope to
+              leverage these strengths to build a
+              new Nigeria, one that is built on the
+              principles of transparency,
+              accountability, and collaboration.
+            </p>
+          </div>
+          <div class="animate__animated rounded-lg" style="animation: bounceIn 1.7s">
+            <div class="w-100 h-100">
+              <img src="./images/jagora-7.jpg" alt="" />
             </div>
-            <!-- Mobile Menu Links -->
-            <div id="mobile-menu" class="menu-hidden bg-red-600 text-white flex-col space-y-4 p-4 md:hidden">
-                <a href="#hero" class="block">Home</a>
-                <a href="#about" class="block">About Us</a>
-                <a href="#gallery" class="block">Gallery</a>
-                <a href="#vision" class="block">Vision & Mission</a>
-                <a href="#services" class="block">Services</a>
+          </div>
+        </div>
+        <p class="leading-relaxed text-xl pt-6 mx-auto md:p-6 md:px-10">
+          Our team is composed of some of the
+          most talented and passionate
+          individuals, including digital
+          strategists, policy experts, and social
+          media gurus, who are all committed to
+          creating a better future for Nigeria. We
+          believe that technology provides a
+          unique opportunity to amplify the
+          voices of every Nigerian, and to build a
+          his innovative approach to solving government that works for the
+          people, by the people.
+        </p>
+      </div>
+    </section>
+
+
+
+
+    <!-- Objectives -->
+    <section id="objectives" class="md:min-h-screen md:py-8 bg-green-400">
+      <div class="text-gray-100 body-font h-100 py-10">
+        <h3 class="text-3xl font-semibold p-4 text-center">Objectives</h3>
+        <div class="container mx-auto flex md:px-10 my-6 md:flex-row flex-col items-center">
+          <div
+            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-12 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-left">
+            <!-- <h2 class="text-3xl font-bold mb-6">Objectives</h2> -->
+            <ul class="list-disc ml-6 space-y-4 text-xl font-medium p-4">
+              <li>
+                Establish a strong online presence through a website, social
+                media, and YouTube channel.
+              </li>
+              <li>
+                Create high-quality and engaging content that showcases
+                Kwankwaso's vision and policies.
+              </li>
+              <li>
+                Develop a social media strategy to reach a wider audience and
+                interact with supporters.
+              </li>
+              <li>
+                Invest in paid social media advertising to reach a wider
+                audience and drive traffic.
+              </li>
+              <li>
+                Host online events: Organize webinars, town
+                hall mee ngs, and virtual rallies to connect with
+                supporters and answer their ques ons.
+              </li>
+            </ul>
+            <div class="flex justify-center mt-6 md:ml-12">
+              <a href="objectives.html"
+                class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">
+                Read More...
+              </a>
             </div>
-        </nav>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="hero" src="./images/jagora-8.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-        <!-- Hero Section -->
-        <section id="hero" class="relative bg-cover bg-center h-screen hero"
-            style="background-image: url('https://pbs.twimg.com/media/GX2Ui7bWMAAzEwn?format=jpg&name=900x900'); margin-top: 64px;">
-            <!-- Overlay -->
-            <div class="absolute inset-0 hero-overlay"></div>
 
-            <!-- Content -->
-            <div class="relative z-10 flex items-center justify-center h-full text-center text-white px-6 md:px-12">
-                <div>
-                    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-4 animate__animated"
-                        style="animation: fadeInUp 1.5s ease;">
-                        Empowering Nigeria's Future with Kwankwaso
+    <!-- Image Gallery Done-->
+    <section id="gallery" class="md:min-h-screen md:py-8 bg-white">
+        <div class="container mx-auto md:px-12 md:pt-10">
+          <div class="container px-5 mx-auto">
+            <div class="flex flex-col text-center w-full mb-10">
+              <h3 class="text-3xl font-semibold p-4 text-center">Gallery</h3>
+              <p class="lg:w-Alper Kamu2/3 mx-auto leading-relaxed text-base">
+                What we have done so far and what are coming to the KND project.
+              </p>
+              <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                To create a new Nigerian Youths who
+                will be patriotic, transparent and
+                committed in supporting the emergence
+                of Senator Rabiu Musa Kwankwaso as
+                President of Nigeria.
+              </p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+
+              <div class="lg:w-1/3 sm:w-1/2 p-4 sm:w-100">
+                <div class="flex relative min-h-full w-full">
+                  <img
+                    alt="gallery"JAGORA
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    src="./images/jagora-7.jpg"
+                  />
+                  <div
+                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100"
+                  >
+                    <h2
+                      class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"
+                    >
+                      JAGORA
+                    </h2>
+                    <h1
+                      class="title-font text-lg font-medium text-gray-900 mb-3"
+                    >
+                      Our New Hope for Nigerians
                     </h1>
-                    <p class="text-xl md:text-2xl leading-relaxed mb-8 animate__animated"
-                        style="animation: fadeInUp 1.8s ease;">
-                        A Digital Revolution for Progress
+                    <p class="leading-relaxed">
+                      Photo of Kwankwaso in an inauguration lecture,
+                      where he shared his knowledge and experience on 
+                      his vision for Nigerian
                     </p>
-                    <a href="#about"
-                        class="bg-red-600 text-white py-3 px-6 rounded-full text-lg font-semibold shadow-lg hover:bg-red-700 transition duration-300 ease-in-out animate__animated"
-                        style="animation: fadeInUp 2.1s ease;">
-                        Learn More
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="lg:w-1/3 sm:w-1/2 p-4">
+                <div class="flex relative min-h-600">
+                  <img
+                    alt="gallery"
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    src="./images/masters-scholarship-students.jpg"
+                  />
+                  <div
+                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100"
+                  >
+                    <h2
+                      class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"
+                    >
+                      Education
+                    </h2>
+                    <h1
+                      class="title-font text-lg font-medium text-gray-900 mb-3"
+                    >
+                      Master scholarships Students
+                    </h1>
+                    <p class="leading-relaxed">
+                      President SR University KNSG Scholars, India. 
+                      On behalf of Kano State Scholars 1,001, who graduated 
+                      from Masters degree in SR University in 
+                      India sponsored by Kano Government
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="lg:w-1/3 sm:w-1/2 p-4">
+                <div class="flex relative">
+                  <img
+                    alt="gallery"
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    src="./images/kwankwaso-and-his-circles.jpg"
+                  />
+                  <div
+                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100"
+                  >
+                    <h2
+                      class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"
+                    >
+                      Kwankwasiyya
+                    </h2>
+                    <h1
+                      class="title-font text-lg font-medium text-gray-900 mb-3"
+                    >
+                      Kwankwaso and the members of the NNPP
+                    </h1>
+                    <p class="leading-relaxed">
+                      Kwankwaso and the members of the NNPP, including, 
+                      his excellency the Governor of Kano State.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="lg:w-1/3 sm:w-1/2 p-4">
+                <div class="flex relative">
+                  <img
+                    alt="gallery"
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    src="./images/clinics-renovation.jpg"
+                  />
+                  <div
+                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100"
+                  >
+                    <h2
+                      class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"
+                    >
+                      Health
+                    </h2>
+                    <h1
+                      class="title-font text-lg font-medium text-gray-900 mb-3"
+                    >
+                      Renovation of Clinics and Health facilities
+                    </h1>
+                    <p class="leading-relaxed">
+                      This is Bamalli Nuhu hospital renovated by the 
+                      administration of His Excellency Engr Abba Kabir Yusuf.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="lg:w-1/3 sm:w-1/2 p-4">
+                <div class="flex relative">
+                  <img
+                    alt="gallery"
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    src="./images/primary-school.jpg"
+                  />
+                  <div
+                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100"
+                  >
+                    <h2
+                      class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"
+                    >
+                      Education
+                    </h2>
+                    <h1
+                      class="title-font text-lg font-medium text-gray-900 mb-3"
+                    >
+                      Primary and secondary Schools
+                    </h1>
+                    <p class="leading-relaxed">
+                      New classroom block at warawa primary school 
+                      in warawa lGA and
+                      Tsingau Primary School at Minjibir Local Government,
+                      Fully renovated with furniture.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:w-1/3 sm:w-1/2 p-4">
+                <div class="flex relative">
+                  <img
+                    alt="gallery"
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    src="https://pbs.twimg.com/media/GX2Ui7bWMAAzEwn?format=jpg&name=900x900"
+                  />
+                  <div
+                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100"
+                  >
+                    <h2
+                      class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"
+                    >
+                      Contribution
+                    </h2>
+                    <h1
+                      class="title-font text-lg font-medium text-gray-900 mb-3"
+                    >
+                      Kwankwaso & other governors
+                    </h1>
+                    <p class="leading-relaxed">
+                      Photo booth fam kinfolk cold-pressed sriracha leggings
+                      jianbing microdosing tousled waistcoat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+
+    <!-- Projects and progress -->
+    <section id="progress" class="bg-white md:py-12">
+      <div class="container mx-auto md:px-12 md:pt-10 px-4">
+
+        <!-- Header Section -->
+        <div class="bg-green-500 text-white p-8 text-center my-6">
+          <h1 class="text-2xl md:text-4xl font-bold">
+            Empowering Nigeria's Future with Kwankwaso
+          </h1>
+          <p class="text-lg md:text-xl mt-2">
+            A Digital Revolution for Progress
+          </p>
+        </div>
+
+        <!-- First Row: Large Text and Crowd Image -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+          <!-- 774 Local Governments -->
+          <div class="bg-yellow-500 text-center p-6 flex flex-col justify-center rounded-lg">
+            <h2 class="text-6xl font-bold">774</h2>
+            <p class="text-xl mt-2">Local Governments</p>
+          </div>
+          <!-- Crowd Image -->
+          <div class="rounded-lg overflow-hidden">
+            <img src="./images/supporters.png" alt="Crowd" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <!-- Second Row: States + FCT Target and 'New Nigeria' Image -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 md:gap-4 mb-6 max=h-[20vh]">
+          <!-- 36 States Target -->
+          <div class="custom-bg-red text-white text-center p-6 flex flex-col justify-center rounded-lg shadow-md">
+            <h2 class="text-red-600 text-6xl font-bold">36</h2>
+            <p class="text-lg mt-2 text-gray-600">STATES + FCT</p>
+          </div>
+          <!-- 'New Nigeria is Possible' Image -->
+          <div class="col-span-2 rounded-lg overflow-hidden h-full">
+            <img src="./images/nigeria-flag-with-text.png" alt="New Nigeria is Possible" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <!-- Third Row: 20 Million Nigerian Adults Target and Campaign Image -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <!-- 20 Million Target -->
+          <div class="bg-red-600 text-white text-center p-6 flex flex-col justify-center rounded-lg">
+            <h2 class="text-4xl md:text-6xl font-bold">20,000,000</h2>
+            <p class="text-lg mt-2">Nigerian Adults, Youth & Women</p>
+          </div>
+          <!-- Kwankwaso Campaign Image -->
+          <div class="rounded-lg overflow-hidden">
+            <img src="./images/jagora-5.jpg" alt="Kwankwaso Campaign" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- Patrons -->
+    <section id="patrons" class="m-12 py-12">
+      <!-- Main Section for Patrons -->
+      <div class="relative p-8 bg-white shadow-lg max-w-5xl mx-auto mt-10 rounded-lg">
+        <!-- Background Image -->
+        <div class="absolute inset-0 opacity-10 bg-cover bg-center"
+          style="background-image: url('./images/jagora-8.jpg')"></div>
+
+        <!-- Overlay Content -->
+        <div class="relative z-10 text-center">
+          <!-- Section Title -->
+          <h2 class="text-lg md:text-xl font-bold uppercase text-gray-700">
+            KND-PROJECT
+          </h2>
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mt-2">
+            Patrons
+          </h3>
+
+          <!-- Image Circles (Patrons) -->
+          <div class="mt-10 flex flex-col items-center space-y-8">
+
+            <!-- Top Two Patrons (Side by Side) -->
+            <div class="md:flex gap-12 py-8">
+              <div class="sm:w-100 mb-12">
+                <div
+                  class="container mx-auto flex items-center justify-center flex-col rounded-full w-[200px] h-[200px] shadow-lg border-4 border-red-500">
+                  <img class="w-full h-full object-cover object-center rounded-full" alt="hero"
+                    src="./images/p-nnpc.png" />
+                </div>
+                <div>
+                  <p class="text-lg font-semibold text-gray-700 mt-2">
+                    SEN. DR. RABIU MUSA KWANKWASO
+                  </p>
+                  <p class="text-sm text-gray-500">
+                    NNNPP PRESIDENTIAL CANDIDATE
+                  </p>
+                </div>
+              </div>
+              <div class="sm:w-100">
+                <div
+                  class="container mx-auto flex items-center justify-center flex-col rounded-full w-[200px] h-[200px] shadow-lg border-4 border-red-500">
+                  <img class="w-full h-full object-cover object-center rounded-full" alt="hero"
+                    src="./images/vp-nnpc.png" />
+                </div>
+                <div>
+                  <p class="text-lg font-semibold text-gray-700 mt-2">
+                    BISHOP DR. ISAAC IDAHOSA
+                  </p>
+                  <p class="text-sm text-gray-500">NNNPP VICE PRESIDENTIAL CANDIDATE</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top Patron -->
+            <div>
+              <div
+                class="container mx-auto flex items-center justify-center flex-col rounded-full w-[200px] h-[200px] shadow-lg border-4 border-red-500">
+                <img class="w-full h-full object-cover object-center rounded-full" alt="hero"
+                  src="./images/gov-kano.png" />
+                <!-- <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded-full" alt="hero" src="./images/jagora-5.jpg"> -->
+              </div>
+              <div>
+                <p class="text-xl font-semibold text-gray-700 mt-2 text-center">
+                  ALHAJI ABBA KABIR YUSUF
+                </p>
+                <p class="text-sm text-gray-500 text-center">
+                  EXECUTIVE GOVERNOR OF KANO STATE
+                </p>
+              </div>
+            </div>
+
+            <!-- Bottom Two Patrons (Side by Side) -->
+            <div class="md:flex gap-12 py-10">
+              <div class="sm:w-100 mb-12">
+                <div
+                  class="container mx-auto flex items-center justify-center flex-col rounded-full w-[200px] h-[200px] shadow-lg border-4 border-red-500">
+                  <img class="w-full h-full object-cover object-center rounded-full" alt="hero"
+                    src="./images/dp-kano.png" />
+                </div>
+                <div>
+                  <p class="text-lg font-semibold text-gray-700 mt-2">
+                    COMR. AMINU ABDULSALAM
+                  </p>
+                  <p class="text-sm text-gray-500">
+                    DEPUTY GOVERNOR OF KANO STATE
+                  </p>
+                </div>
+              </div>
+              <div class="sm:w-100">
+                <div
+                  class="container mx-auto flex items-center justify-center flex-col rounded-full w-[200px] h-[200px] shadow-lg border-4 border-red-500">
+                  <img class="w-full h-full object-cover object-center rounded-full" alt="hero"
+                    src="./images/state-sm.png" />
+                </div>
+                <div>
+                  <p class="text-lg font-semibold text-gray-700 mt-2">
+                    ENGR. BUBA GALADIMA
+                  </p>
+                  <p class="text-sm text-gray-500">ELDER STATESMAN</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Vision & Mission Section -->
+    <section id="mission-and-vision" class="py-10 bg-red-600 w-100 mt-12"> 
+      <h3 class="text-3xl font-semibold pt-10 text-center text-white">Mission & Vision</h3>
+      <div
+        class="container mx-auto px-12 pt-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:py-8"
+      >
+        <div
+          class="animate__animated bg-red-50 p-8 md:mt-12 rounded-lg"
+          style="animation: bounceIn 1.5s"
+        >
+          <h3 class="text-3xl font-semibold mb-4">Mission</h3>
+          <p class="leading-relaxed">
+            Our mission is to provide Kwankwaso with a strong digital presence
+            that will generate engagement and support for his presidential
+            campaign. We aim to connect with the Nigerian electorate by
+            utilizing various digital platforms.
+          </p>
+        </div>
+        <div
+          class="animate__animated bg-red-50 p-8 md:mt-12 rounded-lg"
+          style="animation: bounceIn 1.7s"
+        >
+          <h3 class="text-3xl font-semibold mb-4">Vision</h3>
+          <p class="leading-relaxed">
+            Our vision is to create a digital revolution for progress in
+            Nigeria by bringing Kwankwaso's transformative agenda to the
+            forefront and inspiring a new generation of leadership.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Contact -->
+    <section id="contact" class="text-gray-600 body-font relative">
+      <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+        <div
+          class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+          <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0"
+            marginwidth="0" scrolling="no"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1133204.9155631366!2d7.651584660816058!3d11.705705943018863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ac492941faebb7%3A0xb77211b27ef50cdb!2sKano!5e1!3m2!1sen!2sng!4v1730634479671!5m2!1sen!2sng"
+            style="filter: grayscale(1) contrast(1.2) opacity(0.4)"></iframe>
+          <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+            <div class="lg:w-1/2 px-6">
+              <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">
+                ADDRESS
+              </h2>
+              <p class="mt-1">
+                No. 213 Nasarawa LGA. Kano State, Nigeria
+              </p>
+            </div>
+            <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+              <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">
+                EMAIL
+              </h2>
+              <a class="text-indigo-500 leading-relaxed">kndproject@gmail.com</a>
+              <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
+                PHONE
+              </h2>
+              <p class="leading-relaxed">+234-9091-9292</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full p-6 md:py-8 mt-8 md:mt-0">
+          <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
+            Contact Us
+          </h2>
+          <p class="leading-relaxed mb-5 text-gray-600">
+            KND Project Team are interested in working with you, 
+            contact us for any questions, contribution and feedback!
+          </p>
+          <div class="relative mb-4">
+            <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+            <input type="text" id="name" name="name"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+          </div>
+          <div class="relative mb-4">
+            <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+            <input type="email" id="email" name="email"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+          </div>
+          <div class="relative mb-4">
+            <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+            <textarea id="message" name="message"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-24 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+          </div>
+          <button class="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">
+            Button
+          </button>
+          <p class="text-xs text-gray-500 mt-3">
+            One of our team member will get back to you as soon as possible
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="relative bg-blueGray-200 pt-8 pb-6">
+      <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-red-600 fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+            <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+              Find us on any of these platforms.
+            </h5>
+            <div class="mt-6">
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/kndproject" target="_blank">
+                <i class="fab fa-facebook-square bg-white text-lightBlue-300 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center"></i>
+              </a>
+              <!-- Twitter -->
+              <a href="https://www.twitter.com/kndproject" target="_blank">
+                <i class="fab fa-twitter bg-white text-blue-400 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center"></i>
+              </a>
+              <!-- Linkedin -->
+              <a href="https://www.linkedin.com/company/kndproject" target="_blank">
+                <i class="fab fa-linkedin bg-white text-lightBlue-400 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center"></i>
+              </a>
+              <!-- Whatsapp channel -->
+              <a href="https://www.whatsapp.com/kndproject" target="_blank">
+                <i class="fab fa-whatsapp bg-white text-green-400 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center"></i>
+              </a>
+              <!-- Telegram -->
+              <a href="https://www.telegram.com/kndproject" target="_blank">
+                <i class="fab fa-telegram bg-white text-blueGray-800 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center"></i>
+              </a>
+            </div>
+            <p class="text-sm mt-6 text-blueGray-500 font-semibold">
+              Kwankwasiyya New Digital Projects
+            </p>
+          </div>
+          <div class="w-full md:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full md:w-6/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">
+                <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" 
+                      href="#home">Home</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" 
+                      href="#about">About Us</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="objectives.html" >Objectives</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" 
+                      href="#progress">Progress</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="#mission-and-vision" >Mission & Vision</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-full md:w-6/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">
+                <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other Resources</span>
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="#patrons">Patrons</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="members.html">Members
                     </a>
-                </div>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="members.html#how-we-work">How we work
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="#gallery">Gallery</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="#contact">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-
-        </section>
-
-
-        <section id="objectives">
-            <div class="text-gray-100 bg-green-400 body-font">
-                <div class="container mx-auto flex md:px-10 py-24 md:flex-row flex-col items-center">
-                    <div
-                        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-left">
-                        <h2 class="text-3xl font-bold mb-6 ">Objectives</h2>
-                        <ul class="list-disc ml-6 space-y-4 text-xl font-medium">
-                            <li>Establish a strong online presence through a website, social media, and YouTube channel.
-                            </li>
-                            <li>Create high-quality and engaging content that showcases Kwankwaso's vision and policies.
-                            </li>
-                            <li>Develop a social media strategy to reach a wider audience and interact with supporters.</li>
-                            <li>Invest in paid social media advertising to reach a wider audience and drive traffic.</li>
-                        </ul>
-                        <div class="flex justify-center mt-6">
-                            <button
-                                class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Read More...</button>
-                        </div>
-                    </div>
-                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        <img class="object-cover object-center rounded" alt="hero" src="./images/jagora-8.jpg">
-                    </div>
-                </div>
+          </div>
+        </div>
+        <hr class="my-6 border-blueGray-300" />
+        <div class="flex flex-wrap items-center md:justify-between justify-center">
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-blueGray-500 font-semibold py-1">
+              Copyright © 2024 KND-PROJECT -
+              <a href="https://www.linkedin.com/abdulsalamamtech" class="text-blueGray-500 hover:text-blueGray-800"
+                target="_blank">AMTECH</a>.
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
-        <!-- Image Gallery Done-->
-        <section id="gallery" class="py-10 bg-white min-h-screen">
-            <div class="container mx-auto md:px-12 md:pt-10">
-                <div class="container px-5 mx-auto">
-                    <div class="flex flex-col text-center w-full mb-10">
-                        <h2 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Galleries</h2>
-                        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">What we have done so far and what are coming
-                            to the KND project</p>
-                    </div>
-                    <div class="flex flex-wrap -m-4">
-                        <div class="lg:w-1/3 sm:w-1/2 p-4">
-                            <div class="flex relative min-h-full">
-                                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                                    src="./images/jagora-7.jpg">
-                                <div
-                                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">JAGORA
-                                    </h2>
-                                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Our New Hope</h1>
-                                    <p class="leading-relaxed">Photo of Kwankwaso in an inauguration lecture</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:w-1/3 sm:w-1/2 p-4">
-                            <div class="flex relative min-h-600">
-                                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                                    src="./images/jagora-5.jpg">
-                                <div
-                                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE
-                                        SUBTITLE</h2>
-                                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-                                    <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                        jianbing microdosing tousled waistcoat.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:w-1/3 sm:w-1/2 p-4">
-                            <div class="flex relative">
-                                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                                    src="./images/jagora-7.jpg">
-                                <div
-                                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE
-                                        SUBTITLE</h2>
-                                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-                                    <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                        jianbing microdosing tousled waistcoat.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:w-1/3 sm:w-1/2 p-4">
-                            <div class="flex relative">
-                                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                                    src="./images/jagora-8.jpg">
-                                <div
-                                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE
-                                        SUBTITLE</h2>
-                                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-                                    <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                        jianbing microdosing tousled waistcoat.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:w-1/3 sm:w-1/2 p-4">
-                            <div class="flex relative">
-                                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                                    src="./images/jagora-7.jpg">
-                                <div
-                                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE
-                                        SUBTITLE</h2>
-                                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-                                    <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                        jianbing microdosing tousled waistcoat.</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="lg:w-1/3 sm:w-1/2 p-4">
-                            <div class="flex relative">
-                                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                                    src="./images/jagora-5.jpg">
-                                <div
-                                    class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE
-                                        SUBTITLE</h2>
-                                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-                                    <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                        jianbing microdosing tousled waistcoat.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    
+    <!-- Javascript -->
+    <script>
+      // JavaScript for Background Image Slideshow
+      const heroSection = document.getElementById("hero");
+      const images = [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx7X_JXj8IRCe_sBekUsTFkMUecPscP558Pw&s", // Image 1
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH809lfkuqy9r6_sT_wh25emAOtci00n7zKA&s", // Image 2
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR266iz5ZOlRwPxYPvf-bsdQrJZjC-bVcHSpYpBPPboXF1a8UgU", // Image 3
+        "https://pbs.twimg.com/media/GW3nX3tWwAAIzPp?format=jpg&name=900x900", // Image 4
+      ];
 
+      let currentIndex = 0;
 
-        <!-- Vision & Mission Section -->
-        <section id="vision" class="py-10 bg-yellow-300 w-100">
-            <div class="container mx-auto px-12 pt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="animate__animated  bg-red-200 p-8" style="animation: bounceIn 1.5s;">
-                    <h3 class="text-3xl font-semibold mb-4">Mission</h3>
-                    <p class="leading-relaxed">
-                        Our mission is to provide Kwankwaso with a strong digital presence that will generate engagement and
-                        support for his presidential campaign. We aim to connect with the Nigerian electorate by utilizing
-                        various digital platforms.
-                    </p>
-                </div>
-                <div class="animate__animated  bg-red-200 p-8" style="animation: bounceIn 1.7s;">
-                    <h3 class="text-3xl font-semibold mb-4">Vision</h3>
-                    <p class="leading-relaxed">
-                        Our vision is to create a digital revolution for progress in Nigeria by bringing Kwankwaso's
-                        transformative agenda to the forefront and inspiring a new generation of leadership.
-                    </p>
-                </div>
-            </div>
-        </section>
+      function changeBackgroundImage() {
+        currentIndex = (currentIndex + 1) % images.length; // Move to the next image
+        heroSection.style.backgroundImage = `url(${images[currentIndex]})`;
+      }
 
+      // Change image every 5 seconds
+      setInterval(changeBackgroundImage, 5000);
 
-        <section id="progress" class="md:py-10 bg-white px-6">
-            <div class="container mx-auto md:px-12 md:pt-10">
-                <!-- Header Section -->
-                <div class="bg-green-500 text-white p-8 text-center my-6">
-                    <h1 class="text-2xl md:text-4xl font-bold">Empowering Nigeria's Future with Kwankwaso</h1>
-                    <p class="text-lg md:text-xl mt-2">A Digital Revolution for Progress</p>
-                </div>
-                <!-- First Row: Large Text and Crowd Image -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-                    <!-- 774 Local Governments -->
-                    <div class="bg-yellow-500 text-center p-6 flex flex-col justify-center rounded-lg">
-                        <h2 class="text-6xl font-bold">774</h2>
-                        <p class="text-xl mt-2">Local Governments</p>
-                    </div>
-                    <!-- Crowd Image -->
-                    <div class="rounded-lg overflow-hidden">
-                        <img src="./images/jagora-5.jpg" alt="Crowd" class="w-full h-auto object-cover">
-                    </div>
-                </div>
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-                <!-- Second Row: States + FCT Target and 'New Nigeria' Image -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 md:gap-4 mb-6 max=h-[20vh]">
-                    <!-- 36 States Target -->
-                    <div class="custom-bg-red text-white text-center p-6 flex flex-col justify-center rounded-lg shadow-md">
-                        <h2 class="text-red-600 text-6xl font-bold">36</h2>
-                        <p class="text-lg mt-2 text-gray-600">STATES + FCT</p>
-                    </div>
-                    <!-- 'New Nigeria is Possible' Image -->
-                    <div class="col-span-2 rounded-lg overflow-hidden h-full">
-                        <img src="./images/nigeria-flag.png" alt="New Nigeria is Possible"
-                            class="w-full h-auto object-cover">
-                    </div>
-                </div>
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("menu-hidden");
+      });
+    </script>
 
-                <!-- Third Row: 20 Million Nigerian Adults Target and Campaign Image -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    <!-- 20 Million Target -->
-                    <div class="bg-red-600 text-white text-center p-6 flex flex-col justify-center rounded-lg">
-                        <h2 class="text-4xl md:text-6xl font-bold">20,000,000</h2>
-                        <p class="text-lg mt-2">Nigerian Adults, Youth & Women</p>
-                    </div>
-                    <!-- Kwankwaso Campaign Image -->
-                    <div class="rounded-lg overflow-hidden">
-                        <img src="./images/jagora-5.jpg" alt="Kwankwaso Campaign" class="w-full h-auto object-cover">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="patrons" class="m-12">
-                <!-- Main Section for Patrons -->
-            <div class="relative p-8 bg-white shadow-lg max-w-5xl mx-auto mt-10 rounded-lg">
-                <!-- Background Image -->
-                <div class="absolute inset-0 opacity-10 bg-cover bg-center"
-                    style="background-image: url('./images/jagora-8.jpg');"></div>
-
-                <!-- Overlay Content -->
-                <div class="relative z-10 text-center">
-                    <!-- Section Title -->
-                    <h2 class="text-lg md:text-xl font-bold uppercase text-gray-700">KND-PROJECT</h2>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mt-2">Patrons</h3>
-
-                    <!-- Image Circles (Patrons) -->
-                    <div class="mt-10 flex flex-col items-center space-y-8">
-                        <!-- Top Patron -->
-                        <div>
-                            <div class="container mx-auto flex items-center justify-center flex-col rounded-full w-[200px] h-[200px] shadow-lg border-4 border-red-500">
-                                <img class="w-full h-full object-cover  object-center rounded-full" alt="hero" src="./images/jagora-5.jpg">
-                                <!-- <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded-full" alt="hero" src="./images/jagora-5.jpg"> -->
-                            </div>
-                            <div>
-                                <p class="text-xl font-semibold text-gray-700 mt-2 text-center">Alhaji Abba Kabir Yusuf</p>
-                                <p class="text-sm text-gray-500 text-center">Executive Governor of Kano State</p>
-                            </div>
-                        </div>
-
-                        <!-- Bottom Two Patrons (Side by Side) -->
-                        <div class="md:flex gap-12 py-10">
-                            <div class="sm:w-100 mb-12">
-                                <div class="container mx-auto flex items-center justify-center flex-col rounded-full w-[200px] h-[200px] shadow-lg border-4 border-red-500">
-                                    <img class="w-full h-full object-cover  object-center rounded-full" alt="hero" src="./images/jagora-5.jpg">
-                                </div>
-                                <div>
-                                    <p class="text-lg font-semibold text-gray-700 mt-2">Comr. Aminu Abdulsalam</p>
-                                    <p class="text-sm text-gray-500">Deputy Governor of Kano State</p>
-                                </div>
-                            </div>
-                            <div class="sm:w-100">
-                                <div class="container mx-auto flex items-center justify-center flex-col rounded-full w-[200px] h-[200px] shadow-lg border-4 border-red-500">
-                                    <img class="w-full h-full object-cover  object-center rounded-full" alt="hero" src="./images/jagora-5.jpg">
-                                </div>
-                                <div>
-                                    <p class="text-lg font-semibold text-gray-700 mt-2">Engr. Buba Galadima</p>
-                                    <p class="text-sm text-gray-500">Elder Statesman</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <script>
-            // JavaScript for Background Image Slideshow
-            const heroSection = document.getElementById('hero');
-            const images = [
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx7X_JXj8IRCe_sBekUsTFkMUecPscP558Pw&s',  // Image 1
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH809lfkuqy9r6_sT_wh25emAOtci00n7zKA&s',  // Image 2
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR266iz5ZOlRwPxYPvf-bsdQrJZjC-bVcHSpYpBPPboXF1a8UgU',  // Image 3
-                'https://pbs.twimg.com/media/GW3nX3tWwAAIzPp?format=jpg&name=900x900'   // Image 4
-            ];
-
-            let currentIndex = 0;
-
-            function changeBackgroundImage() {
-                currentIndex = (currentIndex + 1) % images.length;  // Move to the next image
-                heroSection.style.backgroundImage = `url(${images[currentIndex]})`;
-            }
-
-            // Change image every 5 seconds
-            setInterval(changeBackgroundImage, 5000);
-
-            // Mobile Menu Toggle
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('menu-hidden');
-            });
-        </script>
-    </div>
-
-
+  </div>
 </body>
 
 </html>
